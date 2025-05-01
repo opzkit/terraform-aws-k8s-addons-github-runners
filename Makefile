@@ -1,6 +1,5 @@
 SHELL = /bin/bash
-EXAMPLES = $(shell find ./examples/* -maxdepth 1 -type d -not -path '*/\.*')
-
+EXAMPLES = $(shell find ./examples/* -maxdepth 0 -type d -not -path '*/\.*')
 .PHONY: examples
 examples: $(addprefix example/,$(EXAMPLES))
 
@@ -9,4 +8,5 @@ example/%:
 	@echo "Processing example: $(notdir $*)"
 	@terraform -chdir=$* init
 	@terraform -chdir=$* validate
-	@terraform -chdir=$* plan
+	@terraform -chdir=$* apply -auto-approve >$*/output
+	@([[ -f $*/validate.sh ]] && $*/validate.sh $*/output) || true

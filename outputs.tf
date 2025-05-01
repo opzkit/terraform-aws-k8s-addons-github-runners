@@ -1,7 +1,7 @@
-output "addon" {
-  value = {
-    content = local.github_runners_yaml
-    version = "0.0.1"
+output "addons" {
+  value = [{
+    content = local.yaml
+    version = local.version
     name    = "github-runners"
-  }
+  }]
 }

@@ -1,0 +1,13 @@
+githubConfigUrl: ${github_config_url}
+githubConfigSecret: ${github_config_secret}
+maxRunners: ${max_runners}
+minRunners: ${min_runners}
+controllerServiceAccount:
+  name: "arc-gha-rs-controller"
+  namespace: "arc-systems"
+runnerScaleSetName: ${runner_name}
+runnerGroup: ${runner_group}
+containerMode:
+  type: "dind"
+labels:
+   runners.opzkit.io/version: ${version}
