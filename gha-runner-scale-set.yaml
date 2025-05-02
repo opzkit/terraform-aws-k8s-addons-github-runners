@@ -131,7 +131,7 @@ metadata:
     actions.github.com/cleanup-manager-role-binding: ${runner_name}-gha-rs-manager
     actions.github.com/cleanup-manager-role-name: ${runner_name}-gha-rs-manager
     actions.github.com/cleanup-no-permission-service-account-name: ${runner_name}-gha-rs-no-permission
-    actions.github.com/values-hash: bc3c92396e20363be2b7df2bfee62452c5fb980a294e6551b5c46d0bca8103a
+    actions.github.com/values-hash: 55936ecd9f524445eff5863c1a7d1908d3b51128b91ea774518c67ae9bb3295
   labels:
     actions.github.com/scale-set-name: ${runner_name}
     actions.github.com/scale-set-namespace: ${namespace}
@@ -148,6 +148,13 @@ metadata:
 spec:
   githubConfigSecret: ${github_config_secret}
   githubConfigUrl: ${github_config_url}
+  listenerTemplate:
+    spec:
+      containers:
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
   runnerGroup: ${runner_group}
   runnerScaleSetName: ${runner_name}
   template:

@@ -11,3 +11,12 @@ containerMode:
   type: "dind"
 labels:
    runners.opzkit.io/version: ${version}
+
+listenerTemplate:
+  spec:
+    containers:
+      name: listener
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
