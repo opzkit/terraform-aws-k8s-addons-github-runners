@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.0...v0.1.1) (2025-06-27)
+
+
+### Miscellaneous Chores
+
+* **deps:** update azure/setup-kubectl digest to 776406b ([#29](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/29)) ([c6678ee](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/c6678eee7e8ae1a0f1a5672d74d78138129f5139))
+* **deps:** update gha-runner-scale-set docker tag to v0.12.1 ([#31](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/31)) ([90a1c4d](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/90a1c4d79d940b7a881d335484623d16ee2339ca))
+
 ## [0.1.0](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.0.1...v0.1.0) (2025-06-19)
 
 
