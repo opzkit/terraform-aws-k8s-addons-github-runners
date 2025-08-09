@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.1](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.0...v0.1.1) (2025-08-09)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 0f859bf ([#34](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/34)) ([5438aac](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/5438aac140be8d94fd90ace8b756f174423db6e1))
+* **deps:** update azure/setup-kubectl digest to 776406b ([#29](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/29)) ([c6678ee](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/c6678eee7e8ae1a0f1a5672d74d78138129f5139))
+* **deps:** update gha-runner-scale-set docker tag to v0.12.1 ([#31](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/31)) ([90a1c4d](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/90a1c4d79d940b7a881d335484623d16ee2339ca))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.100.0 ([#33](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/33)) ([08521dd](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/08521dd346c9876f1b737c23de4e354760d9fb99))
+* **deps:** update pre-commit hook antonbabenko/pre-commit-terraform to v1.99.5 ([#32](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/32)) ([3e8e0b2](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/3e8e0b260936a237da8a4f4ae6f33d5f161b1518))
+
 ## [0.1.0](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.0.1...v0.1.0) (2025-06-19)
 
 
