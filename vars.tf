@@ -1,14 +1,3 @@
-# variable "ssh_priv_key" {
-#   type        = string
-#   description = "Private SSH key that has access to access Github repo"
-#   sensitive   = true
-# }
-#
-# variable "buildtools_content" {
-#   type        = string
-#   description = "A valid buildtools yaml configuration file"
-# }
-
 variable "github_config_secret" {
   type        = string
   description = <<EOF
