@@ -15,8 +15,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${runner_name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.11.0
-    helm.sh/chart: gha-rs-0.11.0
+    app.kubernetes.io/version: 0.12.1
+    helm.sh/chart: gha-rs-0.12.1
     runners.opzkit.io/version: ${version}
   name: ${runner_name}-gha-rs-no-permission
   namespace: ${namespace}
@@ -34,8 +34,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${runner_name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.11.0
-    helm.sh/chart: gha-rs-0.11.0
+    app.kubernetes.io/version: 0.12.1
+    helm.sh/chart: gha-rs-0.12.1
     runners.opzkit.io/version: ${version}
   name: ${runner_name}-gha-rs-manager
   namespace: ${namespace}
@@ -110,8 +110,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${runner_name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.11.0
-    helm.sh/chart: gha-rs-0.11.0
+    app.kubernetes.io/version: 0.12.1
+    helm.sh/chart: gha-rs-0.12.1
     runners.opzkit.io/version: ${version}
   name: ${runner_name}-gha-rs-manager
   namespace: ${namespace}
@@ -131,7 +131,7 @@ metadata:
     actions.github.com/cleanup-manager-role-binding: ${runner_name}-gha-rs-manager
     actions.github.com/cleanup-manager-role-name: ${runner_name}-gha-rs-manager
     actions.github.com/cleanup-no-permission-service-account-name: ${runner_name}-gha-rs-no-permission
-    actions.github.com/values-hash: 55936ecd9f524445eff5863c1a7d1908d3b51128b91ea774518c67ae9bb3295
+    actions.github.com/values-hash: 2493a1a67519ba1f4bed5b3d2863c29708e5cfcdffac344eef4a271bf416943
   labels:
     actions.github.com/scale-set-name: ${runner_name}
     actions.github.com/scale-set-namespace: ${namespace}
@@ -140,8 +140,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${runner_name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.11.0
-    helm.sh/chart: gha-rs-0.11.0
+    app.kubernetes.io/version: 0.12.1
+    helm.sh/chart: gha-rs-0.12.1
     runners.opzkit.io/version: ${version}
   name: ${runner_name}
   namespace: ${namespace}
@@ -151,6 +151,7 @@ spec:
   listenerTemplate:
     spec:
       containers:
+      - name: listener
         resources:
           requests:
             cpu: 100m
@@ -160,20 +161,29 @@ spec:
   template:
     spec:
       containers:
-      - command:
-        - /home/runner/run.sh
-        env:
+      - env:
         - name: DOCKER_HOST
           value: unix:///var/run/docker.sock
         - name: RUNNER_WAIT_FOR_DOCKER_IN_SECONDS
           value: "120"
-        image: ghcr.io/actions/actions-runner:latest
         name: runner
         volumeMounts:
         - mountPath: /home/runner/_work
           name: work
         - mountPath: /var/run
           name: dind-sock
+      initContainers:
+      - args:
+        - -r
+        - /home/runner/externals/.
+        - /home/runner/tmpDir/
+        command:
+        - cp
+        image: null
+        name: init-dind-externals
+        volumeMounts:
+        - mountPath: /home/runner/tmpDir
+          name: dind-externals
       - args:
         - dockerd
         - --host=unix:///var/run/docker.sock
@@ -183,26 +193,23 @@ spec:
           value: "123"
         image: docker:dind
         name: dind
+        restartPolicy: Always
         securityContext:
           privileged: true
+        startupProbe:
+          exec:
+            command:
+            - docker
+            - info
+          failureThreshold: 24
+          initialDelaySeconds: 0
+          periodSeconds: 5
         volumeMounts:
         - mountPath: /home/runner/_work
           name: work
         - mountPath: /var/run
           name: dind-sock
         - mountPath: /home/runner/externals
-          name: dind-externals
-      initContainers:
-      - args:
-        - -r
-        - /home/runner/externals/.
-        - /home/runner/tmpDir/
-        command:
-        - cp
-        image: ghcr.io/actions/actions-runner:latest
-        name: init-dind-externals
-        volumeMounts:
-        - mountPath: /home/runner/tmpDir
           name: dind-externals
       restartPolicy: Never
       serviceAccountName: ${runner_name}-gha-rs-no-permission
