@@ -18,7 +18,7 @@ metadata:
     app.kubernetes.io/version: 0.13.0
     helm.sh/chart: gha-rs-0.13.0
     runners.opzkit.io/version: ${version}
-  name: ${runner-name}-gha-rs-no-permission
+  name: ${runner_name}-gha-rs-no-permission
   namespace: ${namespace}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -130,7 +130,7 @@ metadata:
   annotations:
     actions.github.com/cleanup-manager-role-binding: ${runner_name}-gha-rs-manager
     actions.github.com/cleanup-manager-role-name: ${runner_name}-gha-rs-manager
-    actions.github.com/cleanup-no-permission-service-account-name: ${runner-name}-gha-rs-no-permission
+    actions.github.com/cleanup-no-permission-service-account-name: ${runner_name}-gha-rs-no-permission
     actions.github.com/values-hash: 2493a1a67519ba1f4bed5b3d2863c29708e5cfcdffac344eef4a271bf416943
   labels:
     actions.github.com/scale-set-name: ${runner_name}
@@ -143,7 +143,7 @@ metadata:
     app.kubernetes.io/version: 0.13.0
     helm.sh/chart: gha-rs-0.13.0
     runners.opzkit.io/version: ${version}
-  name: ${runner-name}
+  name: ${runner_name}
   namespace: ${namespace}
 spec:
   githubConfigSecret: ${github_config_secret}
@@ -212,7 +212,7 @@ spec:
         - mountPath: /home/runner/externals
           name: dind-externals
       restartPolicy: Never
-      serviceAccountName: ${runner-name}-gha-rs-no-permission
+      serviceAccountName: ${runner_name}-gha-rs-no-permission
       volumes:
       - emptyDir: {}
         name: dind-sock
