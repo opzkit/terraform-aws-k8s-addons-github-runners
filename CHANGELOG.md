@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.3](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.2...v0.1.3) (2026-03-02)
+
+
+### Miscellaneous Chores
+
+* **deps:** update hashicorp/setup-terraform action to v4 ([#122](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/122)) ([4edee9b](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/4edee9be4727754432ff564d9e81bfadf728f464))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.31.1 ([#120](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/120)) ([75bcda8](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/75bcda80feea37a6a82c3adf74bc846ba9aa4d7c))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.46.6 ([#123](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/123)) ([fcd3176](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/fcd3176e4cdcf5b04f3c85451bb80e72d14740ff))
+
 ## [0.1.2](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.1...v0.1.2) (2026-02-17)
 
 
