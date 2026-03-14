@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.3](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.2...v0.1.3) (2026-03-14)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token action to v3 ([#126](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/126)) ([d9efd71](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/d9efd715dd38ad0e5e5f8b306bbccf3c37216e02))
+* **deps:** update actions/create-github-app-token digest to fee1f7d ([#124](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/124)) ([b7d4cd8](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/b7d4cd83801e8f6e9ab4b8d62ee041168a003794))
+* **deps:** update hashicorp/setup-terraform action to v4 ([#122](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/122)) ([4edee9b](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/4edee9be4727754432ff564d9e81bfadf728f464))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.31.1 ([#120](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/120)) ([75bcda8](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/75bcda80feea37a6a82c3adf74bc846ba9aa4d7c))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.46.6 ([#123](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/123)) ([fcd3176](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/fcd3176e4cdcf5b04f3c85451bb80e72d14740ff))
+* **deps:** update terraform-linters/setup-tflint action to v6.2.2 ([#125](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/125)) ([f302474](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/f302474025528800aaf4f0db9c55ffff0319774e))
+
 ## [0.1.2](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.1...v0.1.2) (2026-02-17)
 
 
