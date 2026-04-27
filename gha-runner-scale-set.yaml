@@ -9,16 +9,16 @@ metadata:
   finalizers:
   - actions.github.com/cleanup-protection
   labels:
-    actions.github.com/scale-set-name: ${runner_name}
+    actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
-    app.kubernetes.io/instance: ${runner_name}
+    app.kubernetes.io/instance: ${name}
     app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: ${runner_name}
+    app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.1
     helm.sh/chart: gha-rs-0.14.1
     runners.opzkit.io/version: ${version}
-  name: ${runner-name}-gha-rs-no-permission
+  name: ${name}-gha-rs-no-permission
   namespace: ${namespace}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -27,17 +27,17 @@ metadata:
   finalizers:
   - actions.github.com/cleanup-protection
   labels:
-    actions.github.com/scale-set-name: ${runner_name}
+    actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
     app.kubernetes.io/component: manager-role
-    app.kubernetes.io/instance: ${runner_name}
+    app.kubernetes.io/instance: ${name}
     app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: ${runner_name}
+    app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.1
     helm.sh/chart: gha-rs-0.14.1
     runners.opzkit.io/version: ${version}
-  name: ${runner_name}-gha-rs-manager
+  name: ${name}-gha-rs-manager
   namespace: ${namespace}
 rules:
 - apiGroups:
@@ -103,22 +103,22 @@ metadata:
   finalizers:
   - actions.github.com/cleanup-protection
   labels:
-    actions.github.com/scale-set-name: ${runner_name}
+    actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
     app.kubernetes.io/component: manager-role-binding
-    app.kubernetes.io/instance: ${runner_name}
+    app.kubernetes.io/instance: ${name}
     app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: ${runner_name}
+    app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.1
     helm.sh/chart: gha-rs-0.14.1
     runners.opzkit.io/version: ${version}
-  name: ${runner_name}-gha-rs-manager
+  name: ${name}-gha-rs-manager
   namespace: ${namespace}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: ${runner_name}-gha-rs-manager
+  name: ${name}-gha-rs-manager
 subjects:
 - kind: ServiceAccount
   name: arc-gha-rs-controller
@@ -128,22 +128,22 @@ apiVersion: actions.github.com/v1alpha1
 kind: AutoscalingRunnerSet
 metadata:
   annotations:
-    actions.github.com/cleanup-manager-role-binding: ${runner_name}-gha-rs-manager
-    actions.github.com/cleanup-manager-role-name: ${runner_name}-gha-rs-manager
-    actions.github.com/cleanup-no-permission-service-account-name: ${runner-name}-gha-rs-no-permission
-    actions.github.com/values-hash: 3d1ebb7445f77b17b5fe7b93f8e0a3244a0c36094c1127c072209eff1b5c462
+    actions.github.com/cleanup-manager-role-binding: ${name}-gha-rs-manager
+    actions.github.com/cleanup-manager-role-name: ${name}-gha-rs-manager
+    actions.github.com/cleanup-no-permission-service-account-name: ${name}-gha-rs-no-permission
+    actions.github.com/values-hash: 87e627988829e0ebf8d11dae3c5b6ab43f2599a937c265cc6be089580967361
   labels:
-    actions.github.com/scale-set-name: ${runner_name}
+    actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
     app.kubernetes.io/component: autoscaling-runner-set
-    app.kubernetes.io/instance: ${runner_name}
+    app.kubernetes.io/instance: ${name}
     app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: ${runner_name}
+    app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.1
     helm.sh/chart: gha-rs-0.14.1
     runners.opzkit.io/version: ${version}
-  name: ${runner-name}
+  name: ${name}
   namespace: ${namespace}
 spec:
   githubConfigSecret: ${github_config_secret}
@@ -156,8 +156,8 @@ spec:
           requests:
             cpu: 100m
             memory: 128Mi
-  runnerGroup: ${runner_group}
-  runnerScaleSetName: ${runner_name}
+  runnerGroup: ${group}
+  runnerScaleSetName: ${name}
   template:
     spec:
       containers:
@@ -212,7 +212,7 @@ spec:
         - mountPath: /home/runner/externals
           name: dind-externals
       restartPolicy: Never
-      serviceAccountName: ${runner-name}-gha-rs-no-permission
+      serviceAccountName: ${name}-gha-rs-no-permission
       volumes:
       - emptyDir: {}
         name: dind-sock
