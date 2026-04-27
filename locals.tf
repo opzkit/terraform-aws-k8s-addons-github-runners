@@ -5,8 +5,8 @@ locals {
     github_config_url    = var.github_config_url
     max_runners          = var.max_runners
     min_runners          = var.min_runners
-    runner_group         = var.runner_group
-    runner_name          = var.runner_name
+    group                = var.runner_group
+    name                 = var.runner_name
     namespace            = var.namespace
     version              = local.version
   })

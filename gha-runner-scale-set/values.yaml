@@ -5,8 +5,8 @@ minRunners: ${min_runners}
 controllerServiceAccount:
   name: "arc-gha-rs-controller"
   namespace: "arc-systems"
-runnerScaleSetName: ${runner_name}
-runnerGroup: ${runner_group}
+runnerScaleSetName: ${name}
+runnerGroup: ${group}
 containerMode:
   type: "dind"
 labels:
