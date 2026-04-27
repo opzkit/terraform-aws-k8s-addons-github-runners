@@ -22,7 +22,7 @@ targets:
     dependsonchange: true
     disablesourceinput: true
     spec:
-      command: "rm -rf gha-runner-scale-set/charts && kubectl kustomize . -o gha-runner-scale-set.yaml --enable-helm"
+      command: "rm -rf gha-runner-scale-set/charts && kubectl kustomize . -o gha-runner-scale-set.yaml --enable-helm && sed -i 's/\\${runner-name}/${runner_name}/g' gha-runner-scale-set.yaml"
       changedif:
         kind: file/checksum
         spec:
