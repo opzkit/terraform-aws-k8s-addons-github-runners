@@ -1,5 +1,37 @@
 # Changelog
 
+## [0.1.4](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.3...v0.1.4) (2026-05-23)
+
+
+### Bug Fixes
+
+* restore runner_name placeholder after kustomize render ([#151](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/151)) ([64ab4fc](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/64ab4fc3dc440c29c77a8f88b2d5717c1311b9eb))
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/create-github-app-token digest to 1b10c78 ([#137](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/137)) ([957eccb](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/957eccb831aa23db06a1df2fbdc7a58386b355cf))
+* **deps:** update actions/create-github-app-token digest to 7bd0371 ([#136](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/136)) ([1a2c38d](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/1a2c38d5856835c4f229f622cdf571f0fea74d24))
+* **deps:** update actions/create-github-app-token digest to bcd2ba4 ([#154](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/154)) ([aef7f88](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/aef7f888275c3fe374cb00676c56d39308f34e2f))
+* **deps:** update azure/setup-helm action to v5 ([#132](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/132)) ([0c91b29](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/0c91b298e02468988736528b7163c3b865694a77))
+* **deps:** update azure/setup-kubectl action to v5 ([#133](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/133)) ([a8748f6](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/a8748f6f84bcbc1f130767ecf3c9a30fecd902ae))
+* **deps:** update azure/setup-kubectl digest to 8293235 ([#139](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/139)) ([225c117](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/225c117863a7e561d61c7fc927e928add3b2d144))
+* **deps:** update Github runners version to 0.14.1 ([#149](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/149)) ([1338aab](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/1338aabfbe65c90adc39482ee8f4387624821587))
+* **deps:** update Github runners version to 0.14.2 ([#157](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/157)) ([36fdff1](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/36fdff17e5825ecf076134f6dd1975a1038deca5))
+* **deps:** update googleapis/release-please-action action to v5 ([#150](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/150)) ([57bf8b3](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/57bf8b3e1e93bd026a1a26d38e19b9d6519d42d4))
+* **deps:** update googleapis/release-please-action digest to 5c625bf ([#138](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/138)) ([eea5231](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/eea5231db4f713a9457dae00d398061ef3bd484f))
+* **deps:** update hashicorp/setup-terraform action to v4.0.1 ([#155](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/155)) ([1cc457c](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/1cc457cd49c3fdf5299d5effe8955a685e8235a0))
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.25.0 ([#152](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/152)) ([12d55cb](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/12d55cb08e67608f97955b38147c5e6d18c8a76d))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.104.4 ([#135](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/135)) ([6430c27](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/6430c273df71e6f7119b7a3bb2ef6811628b0b7a))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.126.0 ([#142](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/142)) ([f945afc](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/f945afc7f4695a2708de0d376ac1888a5dc57b11))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.150.0 ([#153](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/153)) ([6419c91](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/6419c91ebfa04a853f82c26d745d4f14969743c8))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.86.0 ([#130](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/130)) ([9cba88b](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/9cba88b87aebb4d5128b0a9c87af8dacda950ae2))
+* **deps:** update pre-commit hook renovatebot/pre-commit-hooks to v43.99.1 ([#134](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/134)) ([7b9be47](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/7b9be47329b47c750027189c8246cd8d86437326))
+* **deps:** update updatecli/updatecli-action action to v3 ([#144](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/144)) ([a14961f](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/a14961ff929b65895a3e3e4c5b7288b1afcd7e58))
+* **deps:** update updatecli/updatecli-action action to v3.1.2 ([#146](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/146)) ([71e13ea](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/71e13ea0a48fab0132aecafebc2338f79a402d2b))
+* **deps:** update updatecli/updatecli-action action to v3.1.3 ([#148](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/148)) ([730f623](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/730f62373f0f6b6f6e5d7d125396c734784b6160))
+* **deps:** update updatecli/updatecli-action action to v3.2.0 ([#156](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/156)) ([dde0fa0](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/dde0fa03c4b7b26cf5c3f830614c766eccf81299))
+
 ## [0.1.3](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.2...v0.1.3) (2026-03-20)
 
 
