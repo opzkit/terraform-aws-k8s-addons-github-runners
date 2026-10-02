@@ -15,8 +15,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.14.2
-    helm.sh/chart: gha-rs-0.14.2
+    app.kubernetes.io/version: 0.15.0
+    helm.sh/chart: gha-rs-0.15.0
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-no-permission
   namespace: ${namespace}
@@ -34,8 +34,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.14.2
-    helm.sh/chart: gha-rs-0.14.2
+    app.kubernetes.io/version: 0.15.0
+    helm.sh/chart: gha-rs-0.15.0
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
@@ -110,8 +110,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.14.2
-    helm.sh/chart: gha-rs-0.14.2
+    app.kubernetes.io/version: 0.15.0
+    helm.sh/chart: gha-rs-0.15.0
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
@@ -131,7 +131,7 @@ metadata:
     actions.github.com/cleanup-manager-role-binding: ${name}-gha-rs-manager
     actions.github.com/cleanup-manager-role-name: ${name}-gha-rs-manager
     actions.github.com/cleanup-no-permission-service-account-name: ${name}-gha-rs-no-permission
-    actions.github.com/values-hash: 287f236e5083be517ebf41e925272e3092121c03990ccce45a1044fcc8fa65e
+    actions.github.com/values-hash: cda888cd810ec07294c55fdbaeb83d2a227fb0d2a679744f9958eff7f09b646
   labels:
     actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
@@ -140,14 +140,18 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.14.2
-    helm.sh/chart: gha-rs-0.14.2
+    app.kubernetes.io/version: 0.15.0
+    helm.sh/chart: gha-rs-0.15.0
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}
   namespace: ${namespace}
 spec:
   githubConfigSecret: ${github_config_secret}
   githubConfigUrl: ${github_config_url}
+  listenerConfig:
+    scaler:
+      burst: 100
+      qps: 50
   listenerTemplate:
     spec:
       containers:
