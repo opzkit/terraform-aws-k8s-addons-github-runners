@@ -17,7 +17,7 @@ metadata:
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.2
     helm.sh/chart: gha-rs-0.14.2
-    runners.opzkit.io/version: ${version}
+    runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-no-permission
   namespace: ${namespace}
 ---
@@ -36,7 +36,7 @@ metadata:
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.2
     helm.sh/chart: gha-rs-0.14.2
-    runners.opzkit.io/version: ${version}
+    runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
 rules:
@@ -112,7 +112,7 @@ metadata:
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.2
     helm.sh/chart: gha-rs-0.14.2
-    runners.opzkit.io/version: ${version}
+    runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
 roleRef:
@@ -131,7 +131,7 @@ metadata:
     actions.github.com/cleanup-manager-role-binding: ${name}-gha-rs-manager
     actions.github.com/cleanup-manager-role-name: ${name}-gha-rs-manager
     actions.github.com/cleanup-no-permission-service-account-name: ${name}-gha-rs-no-permission
-    actions.github.com/values-hash: 87e627988829e0ebf8d11dae3c5b6ab43f2599a937c265cc6be089580967361
+    actions.github.com/values-hash: 287f236e5083be517ebf41e925272e3092121c03990ccce45a1044fcc8fa65e
   labels:
     actions.github.com/scale-set-name: ${name}
     actions.github.com/scale-set-namespace: ${namespace}
@@ -142,7 +142,7 @@ metadata:
     app.kubernetes.io/part-of: gha-rs
     app.kubernetes.io/version: 0.14.2
     helm.sh/chart: gha-rs-0.14.2
-    runners.opzkit.io/version: ${version}
+    runners.opzkit.io/version: MODULE_VERSION
   name: ${name}
   namespace: ${namespace}
 spec:
