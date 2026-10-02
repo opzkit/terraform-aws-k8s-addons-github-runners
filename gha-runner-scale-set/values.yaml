@@ -10,7 +10,9 @@ runnerGroup: ${group}
 containerMode:
   type: "dind"
 labels:
-   runners.opzkit.io/version: ${version}
+   # Chart >= 0.15.0 rejects invalid label values at render time, so use a
+   # valid placeholder and substitute it in locals.tf
+   runners.opzkit.io/version: MODULE_VERSION
 
 listenerTemplate:
   spec:
