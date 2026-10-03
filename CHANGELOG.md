@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.5...v0.1.6) (2026-10-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update terraform-linters/setup-tflint action to v6.3.2 ([#191](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/issues/191)) ([67b3427](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/commit/67b342700e7c05fabc3ca6fb2aa3b4f7c04d1461))
+
 ## [0.1.5](https://github.com/opzkit/terraform-aws-k8s-addons-github-runners/compare/v0.1.4...v0.1.5) (2026-10-02)
 
 
