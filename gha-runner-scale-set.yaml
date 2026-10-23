@@ -15,8 +15,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.15.0
-    helm.sh/chart: gha-rs-0.15.0
+    app.kubernetes.io/version: 0.15.1
+    helm.sh/chart: gha-rs-0.15.1
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-no-permission
   namespace: ${namespace}
@@ -34,8 +34,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.15.0
-    helm.sh/chart: gha-rs-0.15.0
+    app.kubernetes.io/version: 0.15.1
+    helm.sh/chart: gha-rs-0.15.1
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
@@ -110,8 +110,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.15.0
-    helm.sh/chart: gha-rs-0.15.0
+    app.kubernetes.io/version: 0.15.1
+    helm.sh/chart: gha-rs-0.15.1
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}-gha-rs-manager
   namespace: ${namespace}
@@ -140,8 +140,8 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: ${name}
     app.kubernetes.io/part-of: gha-rs
-    app.kubernetes.io/version: 0.15.0
-    helm.sh/chart: gha-rs-0.15.0
+    app.kubernetes.io/version: 0.15.1
+    helm.sh/chart: gha-rs-0.15.1
     runners.opzkit.io/version: MODULE_VERSION
   name: ${name}
   namespace: ${namespace}
